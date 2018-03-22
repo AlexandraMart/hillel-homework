@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+	var a = +prompt("Enter the first value");
+	var b = +prompt("Enter the second value");
+	var h = +prompt("Enter the step of the interval");
+	var allResult = 0;
+
+	if(a >= 0 && b > a && h > 0 ) {
+
+		for(a; a<b; a=a+h) {
+			console.log(a);
+	 		c = a;
+	 		var result = 1;
+
+		  	for(c; c>=1; c--) {
+				result = result * c;
+			}
+
+			allResult = allResult + result;
+		}
+
+		document.write('The result is ' + allResult);
+
+	} else {
+		document.write("Please enter positive numbers");
+	}
+
+</script>
+
+</body>
+</html> 
