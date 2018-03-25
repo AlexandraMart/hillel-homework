@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<body style="font-family: monospace;">
+
+
+<script>
+
+	//rectangle
+
+	var m = +prompt('Enter width');
+	var n = +prompt('Enter height');
+	for(var i = 1;i<=m;i++) {
+		document.write("*");
+	}
+
+	var length = n -2;
+	var k = 1;
+
+	for(k;k<=length;k++) {
+		document.write("<br/>");
+		document.write("*");
+		for(var i=1;i<=m-2;i++) {
+			document.write("&nbsp;");
+		}
+		
+		document.write("*");
+	}
+
+	document.write("<br/>");
+
+	for(i =1;i<=m;i++) {
+		document.write("*");
+	}
+
+
+	/* separator between figures*/
+	document.write("<br/>");
+	document.write("<br/>");
+	document.write("<br/>");
+
+	//equilateral triangle
+
+	var m = +prompt('Enter the width of the side of the equilateral triangle');;
+
+	for(var i = 1; i<m; i++) {
+		document.write("&nbsp");
+	}	
+
+	document.write("*");
+
+	for(var i = 1; i<m; i++) {
+		document.write("&nbsp");
+	}	
+
+	var space = "&nbsp";
+
+	/*we have already shown the first star*/
+	var iteration = m - 1;
+
+	for(var k = 1 ;k<iteration; k++) {
+		document.write("<br/>");
+
+		for(var i = k+1; i<=iteration; i++) {
+			document.write("&nbsp");
+		}	
+
+		document.write("*");
+		document.write(space);
+		document.write("*");
+
+		for(var i = k+1; i<=iteration; i++) {
+			document.write("&nbsp");
+		}
+
+		space = space + "&nbsp" + "&nbsp";	
+
+	}	
+
+	document.write("<br/>");
+
+	var y = m + iteration;
+
+	for(var i = 1; i<=y; i++) {
+		document.write("*");
+	}
+</script>
+
+</body>
+</html> 
+	
