@@ -5,19 +5,19 @@
 
 	//1
 	var array = [23,1,2,52,5,34,23,6,246,436,2,5,1];
-	var l = array.length;
+	var B = array.slice();
+	var l = B.length;
 	for(var i = 0; i<l; i++){
-		for(var j = 2; j<array[i]; j++){
-			if(array[i] % j) {
+		for(var j = 2; j<B[i]; j++){
+			if(B[i] % j) {
 				continue;
 				
 			}
-			array.splice(i, 1);
+			B.splice(i, 1);
 		}
 	}
 
-	console.log(array);
-
+	console.log(B);
 	//5
 
 	var arr = ["Saab", "Volvo", "BMW"];
