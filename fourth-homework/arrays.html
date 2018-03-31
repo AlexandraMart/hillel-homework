@@ -3,7 +3,7 @@
 <body>
 <script>
 
-	//1
+	//1 i
 	var array = [23,1,2,52,5,34,23,6,246,436,2,5,1];
 	var B = array.slice();
 	var l = B.length;
@@ -18,7 +18,74 @@
 	}
 
 	console.log(B);
-	//5
+
+
+	//1 ii
+	var max = array[0];
+	var maxPos = 0;
+
+	var min = array[0];
+	var minPos = 0;
+
+	for(var i = 0; i<array.length; i++){
+		if(array[i] > max){
+			max = array[i];
+			maxPos = i;
+		}
+
+		else if(array[i] < min){
+			min = array[i];
+			minPos = i;
+		}
+	}
+
+	console.log(max);
+	console.log(maxPos);
+	console.log(min);
+	console.log(minPos);
+
+	//2
+
+	var B2 = [];
+	for (var i=0; i<array.length; i++) {
+		if(array[i]>min && array[i]<max) {
+	    	B2.push(array[i]);
+	    }
+	}
+
+	console.log(B2);
+
+	console.log(array);
+
+
+	//3
+
+	/*var maxAdditional = max;
+
+	array[maxPos] = array[minPos];
+	array[minPos] = maxAdditional;
+
+	console.log("newrr " + array);*/
+
+	//3 despite of how much times max and min meets in array
+
+	var add = +(max +1);
+
+	for (var i=0; i<array.length; i++) {
+		if(array[i] == max) {
+			array[i] = add;
+		}
+		 if (array[i] == min){
+			array[i] = max;
+		} 
+		if(array[i] == add) {
+			array[i] = min;
+		}
+	}
+
+	console.log(array);
+
+	//4 first variant
 
 	var arr = ["Saab", "Volvo", "BMW"];
 	var l = arr.length;
@@ -29,6 +96,26 @@
 	arr.splice(0, l);
 
 	console.log(arr);
+
+	//4 second variant
+
+	var cars = ["Saab", "Volvo", "BMW"];
+	var l = cars.length;
+	for(var i = 0; i<l; i++){
+		var firstElement = cars[0];
+	    
+	    cars[0] = cars[cars.length-1];
+	    cars[cars.length-1] = firstElement;
+	}
+
+	console.log(cars);
+
+	//5
+	// я не уверена правильно ли поняла задание "Определить количество элементов в заданном массиве". Это ведь значит создать массив?
+
+	var arrayLength = min + 5;
+	var newArray = Array(arrayLength);
+	console.log(newArray);
 
 </script>
 
