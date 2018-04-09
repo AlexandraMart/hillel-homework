@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<body style="font-family: monospace;">
+
+
+<script>
+	
+	//first task
+
+	var array = [1,2,3,4,5,6,7];
+	var l = array.length;
+	if(array.length % 2 != 0){
+		l = l - 1;
+	}
+
+	for(var i=0; i<l; i = i + 2){
+	console.log(i);
+		var temp = array[i];
+		array[i] = array[i+1];
+	    array[i+1] = temp;
+	}
+
+	console.log(array);
+
+	//second task
+
+	n = 5;
+	m = 3;
+	var sumArray = [];
+
+	var sum = 0;
+	A = new Array(n);
+
+	for(i = 0; i < A.length; i++){
+	    A[i] = new Array(m);
+	}
+
+	for(i = 0; i < A.length; i++){
+	    for(j = 0; j < A[i].length; j++){
+	        A[i][j] = Math.floor(Math.random()*10);
+	        document.write(A[i][j] + ' ');
+	        sum = sum + A[i][j];
+	    }
+	    document.write('<br />');
+	    sumArray.push(sum);
+	    sum = 0; 
+	}
+
+	var min = sumArray[0];
+	var minPos = 0;
+
+	var max = sumArray[0];
+	var maxPos = 0;
+	for(var i=0; i<sumArray.length; i++){
+		if(sumArray[i] < min){
+			min = sumArray[i];
+			minPos = i;
+		}
+
+		if(sumArray[i] > max){
+			max = sumArray[i];
+			maxPos = i;
+		}
+	}
+
+	var temp;
+
+	if(!isNaN(A[0].length)){
+		var matrixLength = A[0].length;
+	} else {
+		console.log('Your matrix is empty. Please fill it with soame data');
+	}
+
+	 document.write('<br /><br /><br /><br />');
+
+    for(j = 0; j < matrixLength; j++){
+    	temp = A[minPos][j];
+    	A[minPos][j] = A[maxPos][j];
+    	A[maxPos][j] = temp;
+    }
+
+    for(i = 0; i < A.length; i++){
+    for(j = 0; j < A[i].length; j++){
+        document.write(A[i][j] + ' ');
+    }
+	    document.write('<br />');
+	}
+	
+</script>
+
+</body>
+</html> 
+	
