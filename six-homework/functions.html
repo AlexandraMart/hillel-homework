@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<body style="font-family: monospace;">
+
+
+<script>
+
+	//first task
+	n = 10;
+	m = 20;
+
+	var A = new Array(n);
+
+	for(var i=0;i<A.length;i++){
+		A[i] = new Array(m);
+	}
+
+	function tableFill(A){
+	  for(var i=0;i<A.length;i++){
+	    for(var j=0;j<A[i].length;j++){
+	      A[i][j] = Math.floor(Math.random()*90) + 10;
+	      document.write(A[i][j] + ' ')
+	    }
+	    document.write('<br/>')
+	  }
+	}
+
+	tableFill(A);
+
+	//second task
+
+	var c1 = ['j',2,56,'y'];
+	var c2 = [56,'y'];
+
+	function sumF(array) {
+		sum = 0;
+
+		  for(var i =0;i<array.length;i++){
+		      if(!isNaN(array[i])){
+		          sum = sum + array[i];	
+		      }
+		  }
+		return sum;
+	}
+
+	function compare(array1, array2){
+		var first = sumF(array1);
+	    var second = sumF(array2);
+
+	    if(first > second){
+	    	return array1;
+	    } else {
+	    	return array2;
+	    }
+	}
+
+	result = compare(c1, c2);
+	console.log(result);
+	
+</script>
+
+</body>
+</html> 
+	
