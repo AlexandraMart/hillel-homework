@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<body>
+<script>
+
+	//5 Определить количество элементов в заданном массиве, отличающихся от минимального на 5.
+	var array = [5,4,7,8,6,1];
+	var min =  array[0];
+	for(var i=0; i<array.length; i++){
+		if(array[i]<min){
+	        min = array[i];
+	    }
+	}
+
+	var result = '';
+
+	for(var i=0; i<array.length; i++){
+		result = "The element with such parameters doesn't exist";
+		if((min + 5)==array[i]){
+	      result = array[i];
+	      break;
+	    }
+	}
+
+	console.log(min);
+	console.log(result);
+</script>
+
+
+</body>
+</html> 
+	
