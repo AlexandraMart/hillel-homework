@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+
+    //first task
+    function centralElement (array) {
+        var length = array.length;
+        var centerElement = Math.floor(array.length / 2 + 1);
+        if(length % 2 != 0){ 
+            return array.splice(-centerElement, 1);
+        } else {
+            return array.splice(-centerElement, 2);
+        }
+    }
+
+    var array = ["Saab", "Volvo", "BMW", "t", 1, 5,6,7,8,9];
+    var result = centralElement(array);
+    console.log(result);
+
+    //second, third, fourth task
+
+    function doFunction(param1, param2, functionName) {
+        var length = arguments.length;
+        return function(){
+            if(length == 3 && typeof(param1) == 'number' && typeof(param2) == 'number'){
+                return functionName(param1, param2);
+            } else if(length == 2 && typeof(param1) == 'number') {
+                functionName = param2;      
+                return functionName(param1);
+            }
+        }
+    }
+
+    function sum(param1, param2){
+        return param1 + param2;
+    }
+
+     function div(param1, param2){
+        return param1 / param2;
+    }
+
+     function mul(param1, param2){
+        return param1 * param2;
+    }
+
+     function power(param1, param2){
+        return Math.pow(param1, param2);
+    }
+
+    function factorial(param1){
+        var result = 1;
+        for(var i = 0; i < param1; i++){
+            result = result * (param1 - i);
+        }
+        return result;
+    }
+
+    var result = doFunction(2, 4, power);
+    console.log(result());
+    
+
+    var result2 = doFunction(5, factorial);
+    console.log(result2());
+</script>
+
+</body>
+</html>
+
