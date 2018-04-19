@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<body style="font-family: monospace;">
+
+
+<script>
+	//first
+	function inArray(text, array){
+		for(var i=0; i<array.length; i++){
+	    	var result;
+	    	if(text == array[i]){
+	            result = true;
+	            break;
+	        } else {
+	            result = false;
+	        }
+	    }
+	    
+	    return result;
+	}
+	var match = inArray('hello', ['svnj', 'hello', 'cvpoq']);
+	console.log(match);
+
+	//2,3,4
+	obj1 = {
+	    x: 10,
+	    y: 20
+	}
+
+	obj2 = {
+	    z: 10,
+	    t: 20,
+	   x: 15
+	}
+
+	function assignObjects(obj1, obj2, flag=false){
+		var result = {};
+	    
+		for(var key in obj1){
+	        result[key] = obj1[key];
+	    }
+	    
+	    for(var key2 in obj2){
+	        if(!result[key2]){
+	        result[key2] = obj2[key2];
+	        } else if(result[key2] && flag) {
+	        	result[key2] = obj2[key2]
+	        }
+	    }
+	    
+	    return result;
+	}
+
+	var objectConcat = assignObjects(obj1, obj2);
+	console.log(objectConcat);
+		
+</script>
+
+</body>
+</html> 
+	
