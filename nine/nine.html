@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<body style="font-family: monospace;">
+
+
+<script>
+	//first
+	var obj = {
+		doFunction: doFunctionRes,
+	    clear: clearFunction,
+	    copy: copyKey
+	}
+
+	function clearFunction(){
+		this.result = 0;
+	    return this;
+	}
+
+	function copyKey(buffer) {
+	    this[buffer] = undefined;
+		return this;
+	}
+
+	function doFunctionRes(x, y, func){
+	    this.result = func(x, y);
+	    return this;
+	}
+
+	function sum(x, y){
+		var res = x + y;
+		return res;
+	}
+
+	function mul(x, y){
+		var res = x * y;
+	    return res;
+	}
+
+	obj.doFunction(2, 4, sum).doFunction(6, 3, mul).doFunction(6, 1, sum).clear();
+	var result = obj.result;
+	console.log("Result" + result);
+
+	obj.copy("KEY");
+	for(var key in obj){
+		console.log(key);
+	}
+
+	//second
+
+	var str =  'var_text_hello';
+	var arr = str.split("_");
+	var res = "";
+
+
+	for(var i=0; i<arr.length; i++){
+		if(i){
+	    	var up = arr[i][0].toUpperCase();
+	    } else {
+	    	var up = arr[i][0];
+	    }
+		
+	    var el = arr[i].slice(1);
+	    res = res + up + el;
+	}
+
+	arr.join(' ');
+	console.log(res);
+
+	//third
+	function inArray(text, array){
+		for(var i=0; i<array.length; i++){
+	    	var result;
+	    	if(text == array[i]){
+	            result = true;
+	            break;
+	        } else {
+	            result = false;
+	        }
+	    }
+	    
+	    return result;
+	}
+	
+	var match = inArray('hello', ['svnj', 'hello', 'cvpoq']);
+	console.log(match);
+	
+</script>
+
+</body>
+</html> 
+	
