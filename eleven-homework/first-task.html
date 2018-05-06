@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<body style="font-family: monospace;">
+
+
+<script>
+  function firstLevel() {
+
+  }
+
+  firstLevel.prototype.render = function (x) {
+    document.write("Result " + x);
+  }
+
+  function secondLevel() {
+
+  }
+
+  var link = secondLevel.prototype.constructor;
+  secondLevel.prototype = Object.create(firstLevel.prototype);
+  secondLevel.prototype.constructor = link;
+
+
+  secondLevel.prototype.Sum = function(x, y){
+    this.result = x + y;
+  }
+
+  secondLevel.prototype.Div = function(x, y){
+    this.result = x / y;
+  }
+
+  secondLevel.prototype.Mul = function(x, y){
+    this.result = x * y;
+  }
+
+  secondLevel.prototype.setValue = function(){
+    this.result = Math.pow(this.result, 2);
+    firstLevel.prototype.render(this.result);
+
+  }
+
+  function thirdLevel(){
+   
+  }
+
+  var link2 = thirdLevel.prototype.constructor;
+  thirdLevel.prototype = Object.create(secondLevel.prototype);
+  thirdLevel.prototype.constructor = link2;
+
+  thirdLevel.prototype.reInit = function(){
+    var max = 50;
+    var min = 0;
+    var arr = new Array(200);
+    this.arr = arr
+
+    for(var i = 0; i<this.arr.length; i++){
+      this.arrValue = Math.floor(Math.random()*(max - min + 1) + min);
+      this.arr[i] = this.arrValue;  
+    }
+
+    console.log(this.arr)
+  }
+
+  function fourthLevel(){
+
+  }
+
+  var link3 = fourthLevel.prototype.constructor;
+  fourthLevel.prototype = Object.create(thirdLevel.prototype);
+  fourthLevel.prototype.constructor = link3;
+
+  var res = new fourthLevel();
+  res.Sum(2, 5);
+
+  res.setValue();
+  res.reInit();
+</script>
+
+</body>
+</html> 
+  

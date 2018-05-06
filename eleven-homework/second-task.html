@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<body style="font-family: monospace;">
+
+
+<script>
+	function SuperMath() {
+    
+    }
+    
+    SuperMath.prototype.check = function(obj){
+		var agreement = confirm("Do you want to calc " + obj.X + " " + obj.znak + " " + obj.Y);
+        
+        if(agreement){
+        	if(!isNaN(obj.X) && !isNaN(obj.X)){
+                 switch(obj.znak) {
+                  case "+":
+                  this.result = obj.X + obj.Y;
+                  break;
+
+                  case "-":
+                  this.result = obj.X - obj.Y;
+                  break;
+
+                  case "*":
+                  this.result = obj.X * obj.Y;
+                  break;
+
+                  case "/":
+                  if(obj.Y !=0){
+                  	this.result = obj.X / obj.Y;
+                  } else {
+                  this.result = 'we can\'t divine on zero';
+                  }
+                  
+                  break;
+
+                  case "%":
+                  this.result = obj.X % obj.Y;
+                  break;
+
+                  default:
+                  this.result = ( 'Znak isn\'t correct' );
+              } 
+            }
+        	else {
+            	this.result = 'Enter correct numbers';
+            }
+         
+        }
+    }
+    
+    var calc = new SuperMath();
+    var res = calc.check({ X:4, Y:0, znak: "/"});
+    
+    var r = calc.result;
+    console.log(r);
+</script>
+
+</body>
+</html> 
+	
