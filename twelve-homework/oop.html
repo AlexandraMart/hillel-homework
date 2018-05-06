@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<script>
+
+function Field(width, height) {
+	this.width = width;
+    this.height = height;
+
+	var A = new Array(this.width);
+    this.arr = A;
+    
+    this.fill();
+}
+
+Field.prototype.fill = function(){
+	for(i = 0; i < this.arr.length; i++){
+	  this.arr[i] = new Array(this.height);
+	}
+
+	for(i = 0; i < this.arr.length; i++){
+	  for(j = 0; j < this.arr[i].length; j++){
+	      this.arr[i][j] = 0;
+	  }
+	}
+}
+
+Field.prototype.setSeprator = function(value){
+	this.arr = value;
+	console.log("Value" + value);
+	console.log("Arr" + this.arr);
+
+
+	return this.arr;
+}
+
+Field.prototype.renderField = function() {
+	document.write("<hr/>");
+    
+    for(i = 0; i < this.arr.length; i++){
+        for(j = 0; j < this.arr[i].length; j++){
+        if(Person.prototype.arr){
+        document.write(Person.prototype.arr[i][j]);
+        } else {
+        document.write(this.arr[i][j]);
+        }
+           
+        }
+         document.write("<br/>");
+    }
+    
+    document.write("<hr/>");
+}
+
+Field.prototype.clearField = function() {
+	Field.prototype.setSeprator(this.arr);
+	for(i = 0; i < this.arr.length; i++){
+        for(j = 0; j < this.arr[i].length; j++){
+            this.arr[i][j] = 0;
+        }
+    }
+}
+
+Field.prototype.changeSize = function(newX, newY) {
+	this.width = newX;
+    this.height = newY;
+    
+    
+    var A = new Array(this.width);
+    this.arr = A;
+
+   this.fill();  
+   this.clearField();
+}
+
+function Person(width, height, XPosition, YPosition) {
+	Field.apply(this, arguments);
+	this.XPosition = XPosition;
+	this.YPosition = YPosition;
+	 
+	 
+	this.startX = this.XPosition;
+	this.startY = this.YPosition;
+}
+
+
+var link = Person.prototype.constructor;
+Person.prototype = Object.create(Field.prototype);
+Person.prototype.constructor = link;
+
+Person.prototype.start = function(){
+	this.arr[this.XPosition][this.YPosition] = 1;
+	    
+	Field.prototype.setSeprator(this.arr);
+}
+
+Person.prototype.go = function(direction, step){
+	switch(direction){
+    	case "left":
+        this.YPosition = this.YPosition - step;
+        break;
+        
+        case "right":
+        this.YPosition = this.YPosition + step;
+        break;
+        
+        case "top":
+        this.XPosition = this.XPosition - step;
+        break;
+        
+        case "bottom":
+        this.XPosition = this.XPosition + step;
+        break;
+    }
+    
+    this.clearField();
+    
+    this.arr[this.XPosition][this.YPosition] = 1;
+    
+    Field.prototype.setSeprator(this.arr);
+}
+
+Person.prototype.resetPosition = function(){
+  this.XPosition = this.startX;
+  this.YPosition = this.startY;
+  
+  this.clearField();
+ 
+  this.arr[this.XPosition][this.YPosition] = 1;
+  Field.prototype.setSeprator(this.arr);
+}
+
+
+var field = new Field(10, 10);
+
+var person = new Person(10, 10, 2, 2);
+person.start();
+field.renderField();
+
+person.go('left', 2);
+person.go('top', 1);
+
+field.renderField();
+</script>
+
+</body>
+</html>
