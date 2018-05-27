@@ -1,0 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.person {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    left: 300px;
+    top: 300px;
+    position: relative;
+}
