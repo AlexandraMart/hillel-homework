@@ -1,0 +1,38 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.online-store {
+	background: gold;
+	margin-top: 50px;
+
+}
+
+.wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 10px;
+}
+
+.product {
+	margin: 10px;
+	padding: 5px;
+	background: tomato;
+	border: 1px solid #FFF;
+	padding: 10px;
+}
+
+.trash {
+	position: fixed;
+	top: 0;
+	right: 0;
+}
+
+.button {
+	background: antiquewhite;
+	padding: 5px 10px;
+	margin: 0 15px;
+	cursor: pointer;
+}
