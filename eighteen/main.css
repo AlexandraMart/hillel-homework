@@ -4,9 +4,9 @@
 }
 
 .online-store {
-	background: gold;
-	margin-top: 50px;
 
+	margin-top: 50px;
+text-align: center;
 }
 
 .wrapper {
@@ -22,6 +22,12 @@
 	background: tomato;
 	border: 1px solid #FFF;
 	padding: 10px;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+.product-name {
+	margin-bottom: 15px;
 }
 
 .trash {
@@ -35,4 +41,20 @@
 	padding: 5px 10px;
 	margin: 0 15px;
 	cursor: pointer;
+}
+
+.add-to-card.button {
+	margin-bottom: 15px;
+}
+
+.trash{
+	background: white;
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 15px;
+	text-align: center;
+}
+
+.remove-all.button {
+	margin-top: 15px;
 }
