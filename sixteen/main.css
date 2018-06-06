@@ -1,0 +1,48 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.person{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    position: relative;
+    top: 200px;
+}
+
+.my_menu {
+    display: none;
+    list-style-type: none; 
+    margin: 0; 
+    padding: 0;
+    position: fixed;
+    top: 0;
+    left: 0;
+}
+
+.my_menu li {
+    display: block;
+    border: 1px solid red;
+    border-bottom: 0;
+    font-size: 21px;
+    padding: 15px 35px;
+    text-align: center;
+    width: 350px;
+}
+
+.my_menu li:last-child {
+    border-bottom: 1px solid red;
+}
+
+.my_menu li:hover {
+    background-color: blueviolet;
+}
+
+.show {
+    display: block;
+}
+
+.hide {
+	display: none;
+}
