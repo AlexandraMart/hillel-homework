@@ -1,0 +1,60 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.online-store {
+
+	margin-top: 50px;
+text-align: center;
+}
+
+.wrapper {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding: 10px;
+}
+
+.product {
+	margin: 10px;
+	padding: 5px;
+	background: tomato;
+	border: 1px solid #FFF;
+	padding: 10px;
+	border: 1px solid black;
+	border-radius: 5px;
+}
+
+.product-name {
+	margin-bottom: 15px;
+}
+
+.basket {
+	position: fixed;
+	top: 0;
+	right: 0;
+}
+
+.button {
+	background: antiquewhite;
+	padding: 5px 10px;
+	margin: 0 15px;
+	cursor: pointer;
+}
+
+.add-to-card.button {
+	margin-bottom: 15px;
+}
+
+.basket{
+	background: white;
+	border: 1px solid black;
+	border-radius: 5px;
+	padding: 15px;
+	text-align: center;
+}
+
+.remove-all.button {
+	margin-top: 15px;
+}
