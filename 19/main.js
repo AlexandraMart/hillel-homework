@@ -96,7 +96,7 @@ if(localStorage.getItem("myProduct")){
     var cartData = JSON.parse(localStorage.myProduct);
     showBasket();
 } else {
-   var cartData = {};
+ var cartData = {};
 }
 
 function addProductToCard(id) {

@@ -1,9 +1,9 @@
 [
-   {"name": "first product", "quantity": 4},
-{"name": "second product", "quantity": 5},
-{"name": "third product", "quantity": 1},
-{"name": "fourth product", "quantity": 1},
-{"name": "fifth product", "quantity": 1}
+	{"name": "first product", "quantity": 1},
+	{"name": "second product", "quantity": 1},
+	{"name": "third product", "quantity": 1},
+	{"name": "fourth product", "quantity": 1},
+	{"name": "fifth product", "quantity": 1}
 ]
 
 
