@@ -1,10 +1,10 @@
 function render(response){
-    console.log(response);
     return response.map((item, i, arr)=>{
        let FirstGo = true;    
-       return item.map(item2=>{
+       return item.map((item2, i2, arr2)=>{
 
-        let productName = `<div>${item2.name}</div>`;
+        let productName = `<li class="menuHeader">${item2.name}
+        <ul class="menuWrapper">`;
         if(FirstGo) {
             productUniqueName = productName;
             FirstGo = false;
@@ -13,10 +13,15 @@ function render(response){
         }
 
 
-        let goodsForm = productUniqueName + `<div>${item2.forks_url}</div>`;
-        console.log(goodsForm);
+        let goodsForm = productUniqueName + `<li><a href="#">${item2.forks_url}</a></li>`;
+
+        if (arr2.length - 1 === i2) {
+            goodsForm = goodsForm + '</ul></li>'
+        }
         return goodsForm;
     }).join('')
+
+
    }).join('');
 
 }
