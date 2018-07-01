@@ -4,7 +4,7 @@ function render(response){
        let FirstGo = true;    
        return item.map(item2=>{
 
-        let productName = `<ul><li>${item2.name}<li><ul>`;
+        let productName = `<div>${item2.name}</div>`;
         if(FirstGo) {
             productUniqueName = productName;
             FirstGo = false;
@@ -13,7 +13,7 @@ function render(response){
         }
 
 
-        let goodsForm = productUniqueName + `<li>${item2.forks_url}</li>`;
+        let goodsForm = productUniqueName + `<div>${item2.forks_url}</div>`;
         console.log(goodsForm);
         return goodsForm;
     }).join('')
