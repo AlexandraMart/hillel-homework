@@ -1,0 +1,33 @@
+.prod {
+	width: 90%;
+	margin: 0 auto;
+	border: 1px solid red;
+	display: flex;
+	padding: 25px;
+	justify-content: space-between;
+}
+
+.prod .product {
+	width: 18%;
+	box-sizing: border-box;
+	border: 1px solid blue;
+	padding: 25px;
+	text-align: center;
+}
+
+.sort-wrapper {
+	width: 90%;
+	margin: 0 auto;
+	border: 1px solid red;
+	padding: 25px;
+}
+
+.sort-wrapper .sort {
+	width: 150px;
+	background-color: #f2f2f2;
+	text-align: center;
+	display: inline-block;
+	margin-right: 25px;
+	padding: 10px;
+	cursor: pointer;
+}

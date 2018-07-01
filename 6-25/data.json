@@ -1,0 +1,22 @@
+[
+	{
+		"name": "first",
+		"prise": "10000"
+	},
+	{
+		"name": "second",
+		"prise": "5500"
+	},
+	{
+		"name": "third",
+		"prise": "-30"
+	},
+	{
+		"name": "four",
+		"prise": "40"
+	},
+	{
+		"name": "fifth",
+		"prise": "50"
+	}
+]
